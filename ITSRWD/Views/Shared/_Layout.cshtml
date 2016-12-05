@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class=""> <!--without dropdown class you must click to drop menu-->
+                        <a class="dropdown-toggle" role="button" data-toggle="dropdown">About Us<b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Company History", "CompanyHistory", "Home")</li>
+                            <li>@Html.ActionLink("Location", "Location", "Home")</li>
+                            <li>@Html.ActionLink("Customers", "Customers", "Home")</li>
+                            <li>@Html.ActionLink("Testimonials", "Testimonials", "Home")</li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact Centre Solutions</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Call Recording</a>
+                                        <ul class="dropdown-menu">
+                                            <li>@Html.ActionLink("Call Recording for Dispute Resolution", "CRforDispute", "Solutions")</li>
+                                            <li>@Html.ActionLink("Call Recording for Compliance", "CRforCompliance", "Solutions")</li>
+                                            <li>@Html.ActionLink("Persormance Management & Continuous Improvement", "PersonalManagementandImprovement", "Solutions")</li>
+                                            <li>@Html.ActionLink("Advanced Speech Analytics", "AdvSpeechAnalytics", "Solutions")</li>
+                                        </ul>
+                                    </li>
+                                    <li>@Html.ActionLink("Workforce Management", "WorkforceManagement", "Solutions")</li>
+                                    <li>@Html.ActionLink("Computer Telephony Information", "CTInformation", "Solutions")</li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Customer Interaction Management</a>
+                                        <ul class="dropdown-menu">
+                                            <li>@Html.ActionLink("Co-Browse", "CoBrowse", "Solutions")</li>
+                                            <li>@Html.ActionLink("Phone", "Phone", "Solutions")</li>
+                                            <li>@Html.ActionLink("Proactive Chat", "ProactiveChat", "Solutions")</li>
+                                            <li>@Html.ActionLink("Answer", "Answer", "Solutions")</li>
+                                            <li>@Html.ActionLink("Email", "Email", "Solutions")</li>
+                                            <li>@Html.ActionLink("Knowledgebase", "Knowledgebase", "Solutions")</li>
+                                            <li>@Html.ActionLink("Community", "Community", "Solutions")</li>
+                                            <li>@Html.ActionLink("Reactive Chat", "ReactiveChat", "Solutions")</li>
+                                            <li>@Html.ActionLink("Click To Call", "ClickToCall", "Solutions")</li>
+                                            <li>@Html.ActionLink("Social Media", "SocialMedia", "Solutions")</li>
+                                        </ul>
+                                    </li>
+                                    <li>@Html.ActionLink("IVR & Speech Recognition", "IVRSpeechRecognition", "Solutions")</li>
+                                    <li>@Html.ActionLink("Hosted Outbound Dialer", "OutboundDialer", "Solutions")</li>
+                                    <li>@Html.ActionLink("Digital Signature For Contact Centres", "DigitalSignatureForCC", "Solutions")</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Enterprise Solutions</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Lockbox & Remittance Processing", "LockboxRemittance", "Solutions")</li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Payment Solutions</a>
+                                        <ul class="dropdown-menu">
+                                            <li>@Html.ActionLink("Outsorced Payment Solutions", "OutsourcedPayment", "Solutions")</li>
+                                            <li>@Html.ActionLink("On-Premise Payment Solutions", "OnPremisePayment", "Solutions")</li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Customer Interaction Management</a>
+                                        <ul class="dropdown-menu">
+                                            <li>@Html.ActionLink("Proactive Chat", "EProactiveChat", "Solutions")</li>
+                                            <li>@Html.ActionLink("Reactive Chat", "EReactiveChat", "Solutions")</li>
+                                            <li>@Html.ActionLink("Co-Browse", "CoBrowse", "Solutions")</li>
+                                            <li>@Html.ActionLink("Email", "Email", "Solutions")</li>
+                                            <li>@Html.ActionLink("Knowledgebase Management", "KnowledgebaseManagement", "Solutions")</li>
+                                            <li>@Html.ActionLink("Phone", "Phone", "Solutions")</li>
+                                            <li>@Html.ActionLink("Social Media", "SocialMedia", "Solutions")</li>
+                                        </ul>
+                                    </li>
+                                    <li>@Html.ActionLink("Workforce Management - Branch & Back Office", "WorkforceManBranchOffice", "Solutions")</li>
+                                    <li>@Html.ActionLink("Digital Signage Solutions", "DigitalSignature", "Solutions")</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Performance Monitoring</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("HeartBeat For IVR Systems", "HeartBeatForIVR", "Services")</li>
+                                    <li>@Html.ActionLink("WebBeat", "WebBeat", "Services")</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Performance & Load Testing</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Web Stress Testing", "WebStress", "Services")</li>
+                                    <li>@Html.ActionLink("IVR Stress Testing", "IVRStress", "Services")</li>
+                                    <li>@Html.ActionLink("Outbound Dialler Stress Testing", "DiallerStress", "Services")</li>
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Support Services", "SupportServices", "Services")</li>
+                            <li>@Html.ActionLink("Implementation Services", "ImplementationService", "Services")</li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Partners<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Partners", "Index", "Partners")</li>
+                            <li>@Html.ActionLink("Verint", "Verint", "Partners")</li>
+                            <li>@Html.ActionLink("LivePerson", "LivePerson", "Partners")</li>
+                            <li>@Html.ActionLink("IQ Services", "IQServices", "Partners")</li>
+                            <li>@Html.ActionLink("RMG Networks", "RMGNetworks", "Partners")</li>
+                            <li>@Html.ActionLink("Magnetic North", "MagneticNorth", "Partners")</li>
+                            <li>@Html.ActionLink("Moxie", "Moxie", "Customers")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                    
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    
+    <div class="container body-content">
+        @Html.ActionLink(" ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })
+        @RenderBody()
+        <hr />
+        <footer>
+            <p class="pull-right"><a href="#">Back To Top</a></p>
+            <p>&copy; @DateTime.Now.Year - IT Solutions Ltd.
+            &middot; <a href="Home.aspx">Home</a> &middot; <a href="#">About Us</a> &middot;
+            <a href="#">Solutions</a> &middot; <a href="#">Services</a> &middot; <a href="#">Customers</a> &middot;
+            <a href="#">Partners</a> &middot;
+            </p>
+            <p class="">@Html.ActionLink("Contact Us", "Contact") &middot; <a href="#">Terms & Conditions</a> &middot; <a href="#">Sitemap</a> &middot; </p>
+            <div class="pull-right text-muted">IT Solutions Ltd, 18-19 College Green, Dublin 2, Ireland. + 353 1 671 8344 Company Registration Number: 152789 © 2016 IT Solutions Ltd</div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQW9R6_trOtkvJVW12sMAgByTqpuQgOOs&callback=initMap"
+            async defer></script>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 53.3441836, lng: -6.2615611 },
+          zoom: 16
+        });
+        var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        var beachMarker = new google.maps.Marker({
+            position: { lat: 53.3441836, lng: -6.2615611 },
+            map: map,
+            icon: image
+        });
+      }
+    </script> 
+</body>
+
+</html>

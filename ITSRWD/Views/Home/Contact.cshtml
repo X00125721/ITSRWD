@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<div class="row">
+
+    <div class="col-md-6">
+        <h4>  <span class="label label-default">Ireland</span></h4>
+
+        <address>
+            IT Solutions Ltd<br />
+            18-19 College Green <br />
+            Dublin 2 <br />
+            <abbr title="Phone">T:</abbr>
+            +353 (0)1 671 8344 <br />
+            <abbr title="Fax">F:</abbr>
+            +353 (0)1 671 8342
+
+        </address>
+
+        <address>
+            <strong>Support:</strong>   <a href="mailto:Support@example.com">email</a><br />
+            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">email</a>
+        </address>
+
+    </div>
+    <div class="col-md-6">
+        <h4>  <span class="label label-default">UK</span></h4>
+
+        <address>
+            IT Solutions Ltd<br />
+            Daws House<br /> 33 - 35 Daws Lane <br />
+            London NW7 4SD <br />
+            <abbr title="Phone">T:</abbr>
+            +44 (0)20 8906 6666 <br />
+            <abbr title="Fax">F:</abbr>
+            +44 (0)20 8906 6611
+
+        </address>
+
+        <address>
+            <strong>Support:</strong>   <a href="mailto:Support@example.com">email</a><br />
+            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">email</a>
+        </address>
+
+    </div>
+</div>
+<h3 class="text-success">Fill out the form to contact us:</h3>
+<form role="form">
+    <div class="form-group">
+        <label class="control-label" for="formName">Your Name</label>
+        <input type="text" class="form-control" id="formName" placeholder="Enter your name">
+
+        <label class="control-label" for="formCompany">Company</label>
+        <input type="text" class="form-control" id="formCompany" placeholder="Company (optional)">
+
+        <label class="control-label" for="formEmail">Email address</label>
+        <input type="email" class="form-control" id="formEmail" placeholder="Enter email">
+    </div>
+
+    <button type="submit" class="btn btn-success">Send Message</button>
+</form>

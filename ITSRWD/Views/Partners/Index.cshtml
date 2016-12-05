@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ITSRWD.Models.Partner>
+
+@{
+    ViewBag.Title = "Partners";
+}
+
+<h2>Partners</h2>
+<p>IT Solutions enjoys partnerships with market leading technology providers such as:
+Verint Systems
+Liveperson
+IQ Services
+RMG Networks
+Moxie Software
+IT Solutions provides our clients with best of breed solutions and services aimed at protecting existing investments in infrastructure and people while enhancing customer service and sales across direct, online and telephony channels.</p>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PLogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PInfo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PLogo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PInfo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PartnerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PartnerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PartnerID })
+        </td>
+    </tr>
+}
+
+</table>

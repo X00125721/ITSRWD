@@ -1,0 +1,42 @@
+﻿@model ITSRWD.Models.Partner
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Partner</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PLogo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PLogo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PInfo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PartnerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
